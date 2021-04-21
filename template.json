@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+    "type": "Microsoft.ApiManagement/service/apis",
+    "apiVersion": "2020-12-01",
+    "name": "[concat('apimresource0', '/demo-conference-api')]",
+    "properties": {
+        "displayName": "Demo Conference API",
+        "apiRevision": "1",
+        "description": "A sample API with information related to a technical conference.  The available resources  include *Speakers*, *Sessions* and *Topics*.  A single write operation is available to provide  feedback on a session.",
+        "subscriptionRequired": false,
+        "serviceUrl": "https://conferenceapi.azurewebsites.net",
+        "protocols": [
+            "http",
+            "https"
+        ],
+        "isCurrent": true,
+        "path": "/",
+        "format": "openapi-link",
+        "value": "https://conferenceapi.azurewebsites.net/"
+    }
+}
+
+    ],
+    "outputs": {}
+}
